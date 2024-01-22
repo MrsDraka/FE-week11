@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <style>
+      .box {
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body class="bg-light bg-opacity-75">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <img class="img-fluid" src="/images/logo.png" />
+
+          <div>
+            <strong>Welcome to the Online Tic Tac Toe game! </strong> Enter player names below, and click 'Play New Game' to start
+            playing...<br/>
+            <div id = "status">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-3">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="board">
+            <div class="box bg-secondary bg-opacity-75" data-x=0 data-y=0></div>
+            <div class="box bg-secondary bg-opacity-75" data-x=1 data-y=0></div>
+            <div class="box bg-secondary bg-opacity-75" data-x=2 data-y=0></div>
+            <div class="box bg-secondary bg-opacity-75" data-x=0 data-y=1></div>
+            <div class="box bg-secondary bg-opacity-75" data-x=1 data-y=1></div>
+            <div class="box bg-secondary bg-opacity-75" data-x=2 data-y=1></div>
+            <div class="box bg-secondary bg-opacity-75" data-x=0 data-y=2></div>
+            <div class="box bg-secondary bg-opacity-75" data-x=1 data-y=2></div>
+            <div class="box bg-secondary bg-opacity-75" data-x=2 data-y=2></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="players" class="container my-4">
+      <div class="row justify-content-center">
+        <div id="xName" class="col-md-3"></div>
+        <div id="oName" class="col-md-3"></div>
+      </div>
+    </div>
+
+    <div class="container my-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div>
+            <input
+              type="text"
+              class="form-control"
+              id="playerX"
+              placeholder="Type player's X name"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              class="form-control"
+              id="playerO"
+              placeholder="Type player's O name"
+            />
+          </div>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-info btn-lg" id="newGame">
+            Play New Game
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
